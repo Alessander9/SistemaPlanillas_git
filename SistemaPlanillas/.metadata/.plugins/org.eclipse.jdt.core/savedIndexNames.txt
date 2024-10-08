@@ -1,1 +1,0 @@
-INDEX VERSION 1.134+C:\Users\jean_\Desktop\LP2\Proyecto_PL2_Planillas\SistemaPlanillas_git\SistemaPlanillas\.metadata\.plugins\org.eclipse.jdt.core
