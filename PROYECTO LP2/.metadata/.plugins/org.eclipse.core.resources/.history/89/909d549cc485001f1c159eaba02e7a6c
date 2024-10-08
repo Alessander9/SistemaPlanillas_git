@@ -1,0 +1,14 @@
+package pe.com.cibertec.model;
+import jakarta.persistence.Column;
+
+@Entity
+@Table (name = "tb_usuario")
+
+
+public class UsuarioEntity {
+	
+	@Id
+	@GeneratedValue
+	private Integer usuarioId;
+
+}
