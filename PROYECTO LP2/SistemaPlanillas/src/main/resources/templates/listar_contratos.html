@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contratos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Contratos</h2>
+        <a th:href="@{/registrar_contrato}" class="btn btn-primary mb-3">Registrar Contrato</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>RUC Empleador</th>
+                    <th>Cargo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="contrato : ${lst_contrato}">
+                    <td th:text="${contrato.codContrato}"></td>
+                    <td th:text="${contrato.rucEmpleador}"></td>
+                    <td th:text="${contrato.cargo}"></td>
+                    <td>
+                        <a th:href="@{/detalle_contrato/{id}(id=${contrato.codContrato})}" class="btn btn-info">Ver</a>
+                        <a th:href="@{/editar_contrato/{id}(id=${contrato.codContrato})}" class="btn btn-warning">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

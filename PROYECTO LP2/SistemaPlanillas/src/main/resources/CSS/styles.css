@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Estilo básico para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Estilo para los encabezados */
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las tablas */
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para los botones */
+.btn {
+    margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+    color: red;
+    font-weight: bold;
+}

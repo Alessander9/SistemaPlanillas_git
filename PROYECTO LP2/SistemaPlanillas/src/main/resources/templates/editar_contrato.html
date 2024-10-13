@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Contrato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Editar Contrato</h2>
+        <form th:action="@{/editar_contrato/{id}(id=${contrato.codContrato})}" method="post" class="form-group">
+            <div class="form-group">
+                <label for="rucEmpleador">RUC Empleador:</label>
+                <input type="text" id="rucEmpleador" name="rucEmpleador" class="form-control" th:value="${contrato.rucEmpleador}" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" class="form-control" th:value="${contrato.cargo}" required>
+            </div>
+            <div class="form-group">
+                <label for="remuneracion">Remuneración:</label>
+                <input type="text" id="remuneracion" name="remuneracion" class="form-control" th:value="${contrato.remuneracion}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <a th:href="@{/}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
